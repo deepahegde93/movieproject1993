@@ -25,7 +25,7 @@ def add_movie(request):
         img = request.FILES['img']
         movie= Movie(name=name,desc=desc,year=year,img=img)
         movie.save()
-    return render(request,"add.html")
+    return render(request,"index.html")
 
 def update(request,id):
     movie=Movie.objects.get(id=id)
